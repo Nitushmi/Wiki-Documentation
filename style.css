@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     font-family: "Montserrat", serif;
-    line-height: 30px;
+    line-height: 27px;
     font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -13,8 +17,59 @@ body {
 
 .doc{
     padding: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
 }
+
+.doc_left {
+  position: fixed;
+  width: 250px;
+  height: 100vh;
+  overflow-x: scroll;
+  background-color: #2c3e50;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.nav_links {
+  list-style: none;
+  padding: 0;
+}
+
+.nav_links li {
+  margin: 10px 0;
+}
+
+.nav_links a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.nav_links a:hover {
+  background-color: #34495e;
+}
+
+.main_nav{
+  font-weight: 600;
+}
+
+.nav_links2{
+  margin-left: 20px;
+}
+
+.doc_right{
+  margin-left: 350px;
+}
+
 .doc img{
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
 }

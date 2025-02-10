@@ -8,648 +8,673 @@
 </head>
 <body>
     <div class="doc">
-        <h1>AASOne HRMS Documentation</h1>
-        <h2>1. Introduction</h2>
-        <p>Welcome to the <strong>AASOne</strong> <strong>HRMS</strong>, your comprehensive guide to navigating and utilizing the <strong>Human Resource Management System (HRMS)</strong> efficiently. This system streamlines HR processes, designed for ease of use, that enhances workforce management, improves productivity, and ensures compliance with organizational policies. This documentation provides step-by-step instructions to help you maximize its features effectively.</p>
-        <h2><strong>2. Development Journey</strong></h2>
-        <p>The <strong>Human Resource Management System (HRMS)</strong> was developed following a structured approach, ensuring scalability, security, and efficiency. Below is an overview of the <strong>technology stack</strong> and <strong>development phases</strong> that shaped the system.</p>
-        <h3><strong>2.1. Technology Stack</strong></h3>
-        <p>The HRMS is built using modern technologies that enhance performance, security, and seamless user experience:</p>
-        <ul>
-        <li><strong>Backend:</strong> Developed using <strong>Node.js - 22.12.0 (Express.js - 4.21.2)</strong> for building a robust and scalable RESTful API.</li>
-        <li><strong>Frontend:</strong> Built with <strong>Next.js - 15.1.6</strong>, a React-based framework that ensures fast rendering and enhanced user experience.</li>
-        <li><strong>Database:</strong> Utilizes <strong>MongoDB (NoSQL database)</strong> to store and manage employee records, attendance data, and other HR-related information.</li>
-        <li><strong>Authentication:</strong> Implements <strong>JWT-based authentication</strong> for secure access control and data protection.</li>
-        <li><strong>Deployment:</strong> Hosted on multiple platforms, including a <strong>local server, Vercel, Render, and DigitalOcean</strong>, with documentation managed in <strong>Wiki.js</strong> for knowledge sharing.</li>
-        <li><strong>CI/CD:</strong> Uses <strong>Jenkins</strong> for automating build, testing, and deployment processes.</li>
-        <li><strong>Version Control:</strong> Managed through <strong>GitHub</strong>, ensuring efficient source code tracking and collaboration.</li>
-        </ul>
-        <h3><strong>2.2. Development Phases</strong></h3>
-        <p>The HRMS was developed through a well-defined software development lifecycle (SDLC), consisting of the following phases:</p>
-        <p><strong>Planning</strong></p>
-        <ul>
-        <li>Requirement gathering to understand HR workflow and organizational needs.</li>
-        <li>Designing system architecture for efficient data handling and modular development.</li>
-        </ul>
-        <p><strong>Development</strong></p>
-        <ul>
-        <li>Implementing core modules such as <strong>Recruitment, Attendance, Payroll, and Employee Benefits</strong>.</li>
-        <li>Developing <strong>REST APIs</strong> for seamless integration between frontend and backend.</li>
-        </ul>
-        <p><strong>Testing</strong></p>
-        <ul>
-        <li>Conducting <strong>unit testing</strong> to validate individual functions and components.</li>
-        <li>Performing <strong>integration testing</strong> to ensure smooth interaction between modules.</li>
-        <li>Carrying out <strong>User Acceptance Testing (UAT)</strong> to refine the system based on real-user feedback.</li>
-        </ul>
-        <p><strong>Deployment</strong></p>
-        <ul>
-        <li><strong>Local Hosting:</strong> Initial testing on a <strong>local server</strong> and <strong>Vercel</strong> for frontend previews.</li>
-        <li><strong>Cloud Deployment:</strong> Final production deployment on <strong>DigitalOcean</strong>, ensuring scalability and availability.</li>
-        </ul>
-        <p><strong>Maintenance</strong></p>
-        <ul>
-        <li>Regular updates to enhance features and address security vulnerabilities.</li>
-        <li>Performance optimization to improve system responsiveness and efficiency.</li>
-        </ul>
-        <p>This structured development approach has resulted in a <strong>highly efficient and scalable HRMS</strong>, empowering businesses with a seamless <strong>HR automation solution</strong>.</p>
-        <p>&nbsp;</p>
-        <h2>3. Features of the HRMS Software</h2>
-        <h3>3.1. Dashboard</h3>
-        <p>Welcome to the HRMS Portal Dashboard. This guide provides a detailed overview of the dashboard functionalities available to HR users after successful login. The dashboard serves as the central hub for managing HR activities, tracking employee records, and gaining insights into various HR operations.<br>&nbsp;</p>
-        <h4><strong>3.1.1. Accessing the Dashboard</strong></h4>
-        <p><strong>Login Process:</strong></p>
-        <p>Enter your registered <strong>Email ID</strong> and <strong>Password</strong>.</p>
-        <p>An <strong>OTP (One-Time Password)</strong> will be sent to your email for <strong>two-factor authentication (2FA)</strong>.</p>
-        <p>Enter the OTP and click <strong>Login</strong>.</p>
-        <p>Upon successful authentication, you will be redirected to the <strong>Dashboard</strong>.</p>
-        <p>&nbsp;</p>
-        <h4><strong>3.1.2. Dashboard Overview</strong></h4>
-        <p>Upon logging in, you will see the <strong>HRMS Portal Dashboard</strong>, which provides key HR insights and functionalities at a glance.</p>
-        <figure class="image image_resized" style="width:70.01%;">
-        <img src="https://wiki-documentation.vercel.app/HRMS_Dashboard.png" alt="Local Image">
-        <figcaption>AASOne HRMS Dashboard</figcaption>
-        </figure>
-        <p><strong>Welcome Message</strong></p>
-        <ul>
-        <li>A personalized greeting displaying the HR user’s name.</li>
-        <li>Enhances user engagement by confirming successful login.</li>
-        </ul>
-        <p><strong>Main Dashboard Metrics</strong></p>
-        <ul>
-        <li>This section presents an overview of key HR functions:</li>
-        <li><strong>Active Jobs:</strong> Displays the number of currently open job positions.</li>
-        <li><strong>Notice Status:</strong> Highlights any important notices issued.</li>
-        <li><strong>All Attendance:</strong> Provides insights into employee attendance trends.</li>
-        <li><strong>View Reports:</strong> A quick access link to HR reports for in-depth analysis.</li>
-        </ul>
-        <p><strong>Welcome Box - Team Overview</strong></p>
-        <ul>
-        <li>A <strong>blue-highlighted section</strong> providing a summary of the HR team and key members.</li>
-        <li>Helps HR users quickly check team status and members.</li>
-        </ul>
-        <p><strong>Recent Activities</strong></p>
-        <ul>
-        <li>A <strong>real-time activity feed</strong> showcasing recent HR operations:</li>
-        <li><strong>New Job Posted:</strong> Notifications about newly added job openings.</li>
-        <li><strong>Interview Completed:</strong> Updates on recently concluded interviews.</li>
-        <li><strong>Notice Updated:</strong> Information about the latest notice updates.</li>
-        </ul>
-        <p><strong>HR Insights</strong></p>
-        <ul>
-        <li>A dedicated section offering comprehensive HR data, divided into four key areas:</li>
-        <li><strong>Active Recruitment:</strong> Provides a visual representation of ongoing recruitment processes.</li>
-        <li><strong>Notice Board:</strong> Displays official announcements and HR updates.</li>
-        <li><strong>All Attendance:</strong> Offers a detailed view of employee attendance records.</li>
-        <li><strong>Reports:</strong> Direct access to generate and analyze HR-related reports.</li>
-        </ul>
-        <p>&nbsp;</p>
-        <h3><strong>3.1.3. Using the Dashboard Features</strong></h3>
-        <p><strong>Navigating Between Sections:</strong></p>
-        <ul>
-        <li>Click on any dashboard metric or section to view detailed data.</li>
-        <li>Use the sidebar menu for quick navigation between different HRMS modules.</li>
-        </ul>
-        <p><strong>Managing Jobs &amp; Recruitment:</strong></p>
-        <ul>
-        <li>Click on <strong>Active Jobs</strong> to post new job listings or manage existing ones.</li>
-        <li>Track the status of candidates and interviews in <strong>HR Insights &gt; Active Recruitment</strong>.</li>
-        </ul>
-        <p><strong>Monitoring Notices &amp; Updates:</strong></p>
-        <ul>
-        <li>Check the <strong>Notice Board</strong> for company-wide announcements.</li>
-        <li>Post and update notices as per HR policies.</li>
-        </ul>
-        <p><strong>Attendance &amp; Reports:</strong></p>
-        <ul>
-        <li>View detailed attendance records in <strong>All Attendance</strong>.</li>
-        <li>Generate employee and HR reports via the <strong>Reports</strong> section.<br>&nbsp;</li>
-        </ul>
-        <h3>3.2. Users&nbsp;</h3>
-        <p>The <strong>Users</strong> in the HRMS Portal allows HR administrators to manage user accounts efficiently. It provides functionalities to add new users and manage existing users with options to edit or delete user profiles.</p>
-        <p>The Users option consists of two main sections:</p>
-        <ul>
-        <li><strong>Add User</strong></li>
-        <li><strong>Manage Users</strong></li>
-        </ul>
-        <p>&nbsp;</p>
-        <h4><strong>3.2.1. Add User</strong></h4>
-        <p>The <strong>Add User</strong> section enables HR to create new user accounts by filling in necessary details. The following fields are available:</p>
-        <figure class="image image_resized" style="width:70.06%;"><img src="https://wiki-documentation.vercel.app/Add_User.png">
-        <figcaption>Add User Page</figcaption>
-        </figure>
-        <p><strong>Fields in Add User Form:</strong></p>
-        <ul>
-        <li><strong>Full Name:</strong> Enter the full name of the user.</li>
-        <li><strong>Username:</strong> Provide a unique username for system login.</li>
-        <li><strong>Email:</strong> Input the user’s official email address.</li>
-        <li><strong>Password:</strong> Set a secure password for the user.</li>
-        <li><strong>Contact:</strong> Enter the user’s phone number.</li>
-        <li><strong>Role:</strong> Assign a role (e.g., HR, Manager, Employee) based on access levels.</li>
-        </ul>
-        <p><strong>Steps to Add a User:</strong></p>
-        <ul>
-        <li>Navigate to the <strong>Users Module</strong> and select <strong>Add User</strong>.</li>
-        <li>Fill in the required details in the form.</li>
-        <li>Click the <strong>Submit</strong> button to create the user.</li>
-        <li>The new user will now appear in the <strong>Manage Users</strong> section.</li>
-        </ul>
-        <p>&nbsp;</p>
-        <h4><strong>3.2.2. Manage Users</strong></h4>
-        <p>The <strong>Manage Users</strong> section displays all existing users in a <strong>card-based layout</strong>. Each user is represented by a card containing their key details and an action menu.</p>
-        <figure class="image image_resized" style="width:70.04%;"><img src="https://wiki-documentation.vercel.app/Manage_Users.png">
-        <figcaption>Users Management Page</figcaption>
-        </figure>
-        <p><strong>User Card Features:</strong></p>
-        <ul>
-        <li>Displays the user’s <strong>name, email, contact, and role</strong>.</li>
-        <li>Each card has a <strong>three-dot menu (⋮) in the top-right corner</strong> for additional actions.</li>
-        </ul>
-        <p><strong>Edit User:</strong></p>
-        <ul>
-        <li>Click on the three-dot menu (⋮) and select <strong>Edit</strong>.</li>
-        <li>Modify user details in the form.</li>
-        <li>Click <strong>Save Changes</strong> to update the user’s information.</li>
-        </ul>
-        <p><strong>Delete User:</strong></p>
-        <ul>
-        <li>Click on the three-dot menu (⋮) and select <strong>Delete</strong>.</li>
-        <li>A confirmation prompt will appear.</li>
-        <li>Confirm the deletion to permanently remove the user.</li>
-        </ul>
-        <p>&nbsp;</p>
-        <h3>3.3. Masters</h3>
-        <p>The <strong>Master Module</strong> in the HRMS Portal provides administrative capabilities to manage essential configurations such as skills, interview rounds, and location settings (countries and states). This module ensures streamlined HR processes by defining key parameters used throughout the portal.</p>
-        <p>The Master Module consists of three main sections:</p>
-        <ul>
-        <li><strong>Manage Skills</strong></li>
-        <li><strong>Manage Interview Rounds</strong></li>
-        <li><strong>Manage Country</strong></li>
-        </ul>
-        <p>&nbsp;</p>
-        <h4><strong>3.3.1. Manage Skills</strong></h4>
-        <p>The <strong>Manage Skills</strong> section allows HR administrators to define and maintain skill records within the system.</p>
-        <figure class="image image_resized" style="width:70.02%;"><img src="https://wiki-documentation.vercel.app/Master_Table_Manage_Skills.png">
-        <figcaption>Manage Skills Master Page</figcaption>
-        </figure>
-        <p><strong>Features:</strong></p>
-        <ul>
-        <li><strong>Add Skill:</strong> Enter a new skill to be used for job requirements.</li>
-        <li><strong>Search Skill:</strong> Find an existing skill using a search function.</li>
-        </ul>
-        <p><strong>Steps to Add a Skill:</strong></p>
-        <ul>
-        <li>Navigate to the <strong>Manage Skills</strong> section.</li>
-        <li>Enter the skill name in the <strong>Add Skill</strong> field.</li>
-        <li>Click the <strong>Submit</strong> button to save the skill.</li>
-        <li>The newly added skill will be available for future job postings.</li>
-        </ul>
-        <p><strong>Steps to Search for a Skill:</strong></p>
-        <ul>
-        <li>Use the <strong>Search Skill</strong> field to enter the skill name.</li>
-        <li>The system will display relevant results dynamically.</li>
-        </ul>
-        <p>&nbsp;</p>
-        <h4><strong>3.3.2. Manage Interview Rounds</strong></h4>
-        <p>The <strong>Manage Interview Rounds</strong> section allows HR administrators to define job roles and assign interview rounds accordingly.</p>
-        <figure class="image image_resized" style="width:70.15%;"><img src="https://wiki-documentation.vercel.app/Master_Table_Manage_Interview_Rounds.png">
-        <figcaption>Job Roles Management Page</figcaption>
-        </figure>
-        <p><strong>Job Roles Management Block:</strong></p>
-        <ul>
-        <li><strong>Add New Job Role:</strong> Create a new job role to categorize interview rounds.</li>
-        </ul>
-        <p><strong>Interview Rounds Block:</strong></p>
-        <ul>
-        <li><strong>Select Interview Rounds:</strong> Assign interview rounds to a specific job role using a dropdown selection.</li>
-        </ul>
-        <p><strong>Steps to Add a Job Role:</strong></p>
-        <ul>
-        <li>Navigate to the <strong>Manage Interview Rounds</strong> section.</li>
-        <li>Under the <strong>Job Roles Management Block</strong>, enter the new job role.</li>
-        <li>Click <strong>Submit</strong> to save the job role.</li>
-        </ul>
-        <p><strong>Steps to Select Interview Rounds:</strong></p>
-        <ul>
-        <li>Under the <strong>Interview Rounds Block</strong>, select a job role from the dropdown list.</li>
-        <li>Choose the relevant interview rounds for the selected job role.</li>
-        <li>Click <strong>Save Changes</strong> to confirm the selection.</li>
-        </ul>
-        <p>&nbsp;</p>
-        <h4><strong>3.3.3. Manage Country</strong></h4>
-        <p>The <strong>Manage Country</strong> section allows administrators to maintain country and state records.</p>
-        <figure class="image image_resized" style="width:70.03%;"><img src="https://wiki-documentation.vercel.app/Master_Table_Manage_Country.png">
-        <figcaption>Manage Country Master Page</figcaption>
-        </figure>
-        <p><strong>Countries Block:</strong></p>
-        <ul>
-        <li><strong>Add New Country:</strong> Register a new country in the system.</li>
-        </ul>
-        <p><strong>States Block:</strong></p>
-        <ul>
-        <li><strong>Add New State:</strong> Select a country from the dropdown and add a state under it.</li>
-        </ul>
-        <p><strong>Steps to Add a Country:</strong></p>
-        <ul>
-        <li>Navigate to the <strong>Manage Country</strong> section.</li>
-        <li>Under the <strong>Countries Block</strong>, enter the new country name.</li>
-        <li>Click <strong>Submit</strong> to save the country.</li>
-        </ul>
-        <p><strong>Steps to Add a State:</strong></p>
-        <ul>
-        <li>Under the <strong>States Block</strong>, select a country from the dropdown.</li>
-        <li>Enter the new state name.</li>
-        <li>Click <strong>Submit</strong> to save the state under the selected country.</li>
-        </ul>
-        <p>&nbsp;</p>
-        <h3>3.4. Recruitment</h3>
-        <p>The Recruitment section of the HRMS portal is a comprehensive tool designed to streamline the hiring process. This section enables HR professionals to create job notices, manage applications, and oversee all stages of the recruitment cycle efficiently. Key features of the recruitment section include:</p>
-        <ul>
-        <li><strong>Create Notice</strong>: Easily craft and publish detailed job notices to attract qualified candidates.</li>
-        <li><strong>Notice Status</strong>: Monitor the status of job notices, ensuring they reach the intended audience.</li>
-        <li><strong>Manage Jobs</strong>: Keep track of all job postings and make updates as needed.</li>
-        <li><strong>Applied Candidates</strong>: View and manage applications from prospective candidates.</li>
-        <li><strong>Interview</strong>: Schedule and track interviews to assess candidate suitability.</li>
-        <li><strong>Selected Candidates</strong>: Identify and confirm the most suitable candidates for the job.</li>
-        </ul>
-        <p>&nbsp;</p>
-        <h4>3.4.1. Create Notice</h4>
-        <p>The <strong>Create Job Notice</strong> page in the AAS HRMS portal allows HR administrators to craft and publish detailed job listings. This feature ensures seamless job posting with essential details like job title, description, category, number of positions, and more.</p>
-        <figure class="image image_resized" style="width:70.03%;"><img src="https://wiki-documentation.vercel.app/Create_Notice.png">
-        <figcaption>Create Notice Page</figcaption>
-        </figure>
-        <p>The following fields and functionalities are available on the <strong>Create Job Notice</strong> page:</p>
-        <p><strong>Job Title</strong></p>
-        <ul>
-        <li>A text input field to enter the job title.</li>
-        <li>Example: <i>Software Engineer, HR Manager, Sales Executive, etc.</i></li>
-        </ul>
-        <p><strong>Job Description</strong></p>
-        <p>A text area to provide a detailed job description that includes formatting options:</p>
-        <ul>
-        <li><strong>Bold</strong></li>
-        <li><i>Italic</i></li>
-        <li><strong>Underline</strong></li>
-        <li>Bullet points for structured content.</li>
-        </ul>
-        <p><strong>Job Category</strong></p>
-        <ul>
-        <li>A dropdown menu to select the appropriate job category.</li>
-        <li>Example: <i>IT, Marketing, Finance, Human Resources, etc.</i></li>
-        </ul>
-        <p><strong>Number of Positions</strong></p>
-        <ul>
-        <li>A text input field to specify the number of vacancies for the job.</li>
-        <li>Example: <i>1, 5, 10, etc.</i></li>
-        </ul>
-        <p><strong>Publish Date</strong></p>
-        <ul>
-        <li>A date picker to set the job notice publish date.</li>
-        <li>Ensures that the job post is scheduled correctly.</li>
-        </ul>
-        <p><strong>Expiry Date</strong></p>
-        <ul>
-        <li>A date picker to set the expiry date of the job notice.</li>
-        <li>Automatically defaults to <strong>6 months</strong> from the publish date, but can be manually adjusted.</li>
-        </ul>
-        <p><strong>Create Job Notice Button</strong></p>
-        <ul>
-        <li>A button labeled <strong>"Create Job Notice"</strong> to submit the job posting.</li>
-        <li>Ensures that all required fields are validated before submission.</li>
-        </ul>
-        <p><strong>Steps to Create a Job Notice</strong></p>
-        <ul>
-        <li>Navigate to the <strong>Recruitment</strong> section and select <strong>Create Job Notice</strong>.</li>
-        <li>Fill in the <strong>Job Title</strong> in the provided text input field.</li>
-        <li>Write a detailed <strong>Job Description</strong> using the formatting options.</li>
-        <li>Choose the <strong>Job Category</strong> from the dropdown menu.</li>
-        <li>Enter the <strong>Number of Positions</strong> available.</li>
-        <li>Select the <strong>Publish Date</strong> using the date picker.</li>
-        <li>Verify the <strong>Expiry Date</strong> (auto-set to 6 months from publish date, but adjustable if needed).</li>
-        <li>Click on the <strong>Create Job Notice</strong> button to submit the job post.</li>
-        </ul>
-        <p>&nbsp;</p>
-        <h4>3.4.2. Notice Status</h4>
-        <p>The <strong>Notice Status</strong> page in the Recruitment section of the AAS HRMS portal provides HR professionals with an organized view of all published job notices. This page enables tracking and managing job notices efficiently, ensuring a streamlined recruitment process.</p>
-        <figure class="image image_resized" style="width:70.12%;"><img src="https://wiki-documentation.vercel.app/Notice_Status.png">
-        <figcaption>Notice Status Page</figcaption>
-        </figure>
-        <p>The following fields are available on the <strong>Notice Status</strong> page:</p>
-        <p><strong>Notice ID</strong></p>
-        <ul>
-        <li>A unique identifier assigned to each job notice.</li>
-        <li>Helps in quick reference and tracking of job notices.</li>
-        </ul>
-        <p><strong>Job Title</strong></p>
-        <ul>
-        <li>Displays the title of the advertised job.</li>
-        <li>Example: <i>Software Engineer, HR Manager, Sales Executive, etc.</i></li>
-        </ul>
-        <p><strong>Category</strong></p>
-        <ul>
-        <li>Indicates the department or category to which the job belongs.</li>
-        <li>Example: <i>IT, Marketing, Finance, Human Resources, etc.</i></li>
-        </ul>
-        <p><strong>Openings</strong></p>
-        <ul>
-        <li>Shows the number of available positions for the respective job notice.</li>
-        <li>Example: <i>1, 5, 10, etc.</i></li>
-        </ul>
-        <p><strong>Status</strong></p>
-        <ul>
-        <li>Displays the current status of the job notice.</li>
-        <li>Possible statuses include:</li>
-        <li><strong>Approved</strong> – Job notice is approved and ready for job creation.</li>
-        <li><strong>Pending</strong> – Job notice is awaiting approval.</li>
-        </ul>
-        <p><strong>Actions</strong></p>
-        <ul>
-        <li>The following actions can be performed for each job notice:</li>
-        </ul>
-        <p><strong>View (Eye Icon)</strong></p>
-        <ul>
-        <li>Allows users to view detailed information about the job notice.</li>
-        <li>Clicking the eye icon opens a detailed view page with full job notice details.</li>
-        </ul>
-        <p><strong>Create Job (Button)</strong></p>
-        <ul>
-        <li>Enables HR professionals to create a job posting based on the approved job notice.</li>
-        <li>Only available for notices with an <strong>Approved</strong> status.</li>
-        </ul>
-        <p><strong>Table View for Job Notices</strong></p>
-        <ul>
-        <li>All job notices are displayed in a structured table format.</li>
-        <li>Columns include <strong>Notice ID, Job Title, Category, Openings, Status, and Actions</strong>.</li>
-        <li>Users can easily track, view, and take action on job notices from this table.</li>
-        </ul>
-        <h4>3.4.3. Manage Jobs</h4>
-        <p>The <strong>Manage Jobs</strong> page in the Recruitment section of the AAS HRMS portal provides HR professionals with an organized view of all available jobs. This page allows users to efficiently manage job postings, including editing and deleting job listings.</p>
-        <figure class="image image_resized" style="width:70.07%;"><img src="https://wiki-documentation.vercel.app/Manage_Jobs.png">
-        <figcaption>Jobs List Page</figcaption>
-        </figure>
-        <p>The following features are available on the <strong>Manage Jobs</strong> page:</p>
-        <p><strong>1. Job Cards View</strong></p>
-        <p>All available jobs are displayed in a <strong>card format </strong>where each job card contains <strong>essential job details</strong> such as:</p>
-        <ul>
-        <li><strong>Job Title</strong></li>
-        <li><strong>Job Category</strong></li>
-        <li><strong>Number of Positions Available</strong></li>
-        <li><strong>Status of the Job Posting</strong></li>
-        </ul>
-        <p>Clicking on a job card opens a <strong>detailed view</strong> of the job listing.</p>
-        <p><strong>2. Three-Dot Menu Options</strong></p>
-        <p>Each job card has a three-dot menu (<strong>⋮</strong>) located at the <strong>top right corner</strong>, offering the following options:</p>
-        <p><strong>&nbsp; &nbsp; Edit Job</strong></p>
-        <ul>
-        <li>Allows users to modify job details.</li>
-        <li>Clicking this option opens the job editing interface.</li>
-        </ul>
-        <p><strong>&nbsp; &nbsp; Delete Job</strong></p>
-        <ul>
-        <li>Enables users to remove a job posting from the portal.</li>
-        <li>A confirmation prompt appears before deletion to prevent accidental removal.</li>
-        </ul>
-        <p><strong>3. Job Details View</strong></p>
-        <ul>
-        <li>Clicking on a job card opens a detailed page displaying the <strong>full job description and additional job details</strong>.</li>
-        <li>Users can review all aspects of the job posting before making modifications.</li>
-        </ul>
-        <p><strong>4. Steps to Manage Jobs</strong></p>
-        <ul>
-        <li>Navigate to the <strong>Recruitment</strong> section and select <strong>Manage Jobs</strong>.</li>
-        <li>Browse through the <strong>job cards</strong> displayed on the page.</li>
-        <li>Click on a job card to view <strong>detailed job information</strong>.</li>
-        <li>Use the <strong>three-dot menu</strong> to either <strong>Edit</strong> or <strong>Delete</strong> a job posting.</li>
-        <li>Confirm changes or deletions as needed.</li>
-        </ul>
-        <p>&nbsp;</p>
-        <h4>3.4.4. Applied Candidates</h4>
-        <p>The <strong>All Applicants</strong> page in the Recruitment section of the AAS HRMS portal provides HR professionals with a structured and detailed list of all job applicants. This page allows for efficient tracking, reviewing, and shortlisting of candidates.</p>
-        <figure class="image image_resized" style="width:70.03%;"><img src="https://wiki-documentation.vercel.app/All_Applicants.png">
-        <figcaption>All Applicants Page</figcaption>
-        </figure>
-        <p>The following features are available on the <strong>All Applicants</strong> page:</p>
-        <p><strong>1. Tabular Format for Applicants</strong></p>
-        <ul>
-        <li>All applicants are displayed in a <strong>structured table</strong> for easy review.</li>
-        <li>The table contains the following <strong>columns</strong>:</li>
-        <li><strong>Applicant ID</strong> – A unique identifier assigned to each applicant.</li>
-        <li><strong>Full Name</strong> – Displays the full name of the applicant.</li>
-        <li><strong>Gender</strong> – Specifies the applicant’s gender.</li>
-        <li><strong>Role</strong> – Indicates the job role applied for.</li>
-        <li><strong>Email</strong> – Shows the applicant's email address.</li>
-        <li><strong>Actions</strong> – Provides an option to shortlist candidates.</li>
-        </ul>
-        <p><strong>2. Shortlist Candidate Action</strong></p>
-        <ul>
-        <li>Under the <strong>Actions</strong> column, an <strong>eye icon (👁)</strong> is available.</li>
-        <li>Clicking the <strong>eye icon</strong> allows HR professionals to <strong>shortlist</strong> a candidate for further evaluation.</li>
-        <li>This helps streamline the hiring process by keeping track of potential hires efficiently.</li>
-        </ul>
-        <figure class="image image_resized" style="width:70.01%;"><img src="https://wiki-documentation.vercel.app/Candidate_Shortlisting_View.png">
-        <figcaption>Shortlisting Page</figcaption>
-        </figure>
-        <p><strong>3. Steps to View and Shortlist Applicants</strong></p>
-        <ul>
-        <li>Navigate to the <strong>Recruitment</strong> section and select <strong>All Applicants</strong>.</li>
-        <li>Browse through the <strong>tabular list of applicants</strong>.</li>
-        <li>Review applicant details such as <strong>Full Name, Role, and Email</strong>.</li>
-        <li>Click the <strong>eye icon</strong> under the <strong>Actions</strong> column to shortlist a candidate.</li>
-        </ul>
-        <p>&nbsp;</p>
-        <h4>3.4.5. Interview</h4>
-        <p>The <strong>Interview</strong> section under the Recruitment module of the AAS HRMS portal allows interviewers to manage and track candidates scheduled for interviews. This page presents an organized list of candidates in a tabular format, enabling HR professionals to review interview details, download resumes, and provide feedback.</p>
-        <figure class="image image_resized" style="width:70.06%;"><img src="https://wiki-documentation.vercel.app/Scheduled_Interview_List.png">
-        <figcaption>Scheduled Candidates Page</figcaption>
-        </figure>
-        <p>The following features are available on the <strong>Interview</strong> page:</p>
-        <p><strong>1. Tabular Format for Scheduled Interviews</strong></p>
-        <p>The page displays a <strong>list of candidates</strong> scheduled for interviews in a structured table format that consists of the following <strong>columns</strong>:</p>
-        <ul>
-        <li><strong>Applicant ID</strong> – A unique identifier assigned to each applicant.</li>
-        <li><strong>Name</strong> – Displays the full name of the candidate.</li>
-        <li><strong>Round Name</strong> – Specifies the interview round (e.g., Technical, HR, Final).</li>
-        <li><strong>Role</strong> – Indicates the job role applied for.</li>
-        <li><strong>Date</strong> – Shows the scheduled interview date.</li>
-        <li><strong>Time</strong> – Displays the interview timing.</li>
-        <li><strong>Mode</strong> – Specifies whether the interview is online or offline.</li>
-        <li><strong>Result</strong> – Indicates the candidate’s interview status.</li>
-        <li><strong>Actions</strong> – Provides multiple options to manage candidate interviews.</li>
-        </ul>
-        <p><strong>2. Actions Column Options</strong></p>
-        <figure class="image image_resized" style="width:70.08%;"><img src="https://wiki-documentation.vercel.app/Interviewer_Candidate_View.png">
-        <figcaption>Candidate Interview Page</figcaption>
-        </figure>
-        <p>The <strong>Actions</strong> column provides the following functionalities:</p>
-        <ul>
-        <li><strong>View Candidate Details: </strong>Clicking the <strong>eye icon (👁)</strong> allows interviewers to view detailed candidate information.</li>
-        <li><strong>Download Resume: </strong>Interviewers can download the candidate’s resume for review before the interview.</li>
-        <li><strong>Give Feedback: </strong>A <strong>feedback box</strong> is available for interviewers to provide comments or notes about the candidate's performance.</li>
-        <li><strong>Select Interview Result:&nbsp;</strong></li>
-        </ul>
-        <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;A <strong>radio button</strong> is provided with two options:</p>
-        <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Cleared</strong> – Marks the candidate as successful in the interview.</p>
-        <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Failed</strong> – Marks the candidate as unsuccessful in the interview.</p>
-        <p><strong>3. Steps to Manage Interviews</strong></p>
-        <ul>
-        <li>Navigate to the <strong>Recruitment</strong> section and select <strong>Interview</strong>.</li>
-        <li>Browse through the <strong>tabular list of scheduled candidates</strong>.</li>
-        <li>Click the <strong>eye icon</strong> to view <strong>candidate details</strong>.</li>
-        <li>Click <strong>Download Resume</strong> to obtain the candidate’s resume.</li>
-        <li>Provide <strong>feedback</strong> in the designated text box.</li>
-        <li>Select the <strong>interview result</strong> by clicking the <strong>Cleared</strong> or <strong>Failed</strong> radio button.</li>
-        <li>Save the feedback and interview status.</li>
-        </ul>
-        <p>&nbsp;</p>
-        <h4>3.4.6. Selected Candidates</h4>
-        <p>The <strong>Selected Candidates</strong> page in the Recruitment section of the AAS HRMS portal provides HR professionals with a structured list of candidates who have successfully cleared the interview rounds and are selected for hiring. This page enables HR teams to generate offer letters for these candidates efficiently.</p>
-        <figure class="image image_resized" style="width:70.07%;"><img src="https://wiki-documentation.vercel.app/Selected_Candidates.png">
-        <figcaption>Selected Candidates Page</figcaption>
-        </figure>
-        <p>The following features are available on the <strong>Selected Candidates</strong> page:</p>
-        <p><strong>1. Tabular Format for Selected Candidates</strong></p>
-        <p>The page presents a <strong>list of selected candidates</strong> in a structured table format that consists of the following <strong>columns</strong>:</p>
-        <ul>
-        <li><strong>Candidate ID</strong> – A unique identifier assigned to each selected candidate.</li>
-        <li><strong>Full Name</strong> – Displays the full name of the selected candidate.</li>
-        <li><strong>Role</strong> – Indicates the job role for which the candidate is selected.</li>
-        <li><strong>Email</strong> – Shows the candidate’s email address.</li>
-        <li><strong>Status</strong> – Displays the hiring status of the candidate.</li>
-        <li><strong>Actions</strong> – Provides an option to generate an offer letter.</li>
-        </ul>
-        <p><strong>2. Generate Offer Letter Action</strong></p>
-        <ul>
-        <li>Under the <strong>Actions</strong> column, a <strong>Generate Offer</strong> button is available.</li>
-        <li>Clicking the <strong>Generate Offer</strong> button initiates the process of creating an official offer letter for the selected candidate.</li>
-        <li>This feature helps streamline the hiring process by enabling quick and efficient offer letter generation.</li>
-        </ul>
-        <p><strong>3. Steps to Generate an Offer Letter</strong></p>
-        <figure class="image image_resized" style="width:70.1%;"><img src="https://wiki-documentation.vercel.app/Offer_Letter.png">
-        <figcaption>Offer Letter Page</figcaption>
-        </figure>
-        <ul>
-        <li>Navigate to the <strong>Recruitment</strong> section and select <strong>Selected Candidates</strong>.</li>
-        <li>Browse through the <strong>tabular list of selected candidates</strong>.</li>
-        <li>Click the <strong>Generate Offer</strong> button under the <strong>Actions</strong> column for the desired candidate.</li>
-        <li>The system will initiate the offer letter generation process.</li>
-        <li>Review and finalize the offer letter before sending it to the candidate.</li>
-        </ul>
-        <p>&nbsp;</p>
-        <h3>3.5. Attendance</h3>
-        <p>The <strong>Attendance Section</strong> in the HRMS portal is designed to streamline and automate employee attendance tracking, ensuring accurate and real-time records. It includes two core features:</p>
-        <ul>
-        <li><strong>Add Attendance</strong> – Allows employees to mark their attendance by clicking <strong>Check-In</strong> and <strong>Check-Out</strong> buttons based on their shift timings.</li>
-        <li><strong>All Attendance</strong> – Enables HR personnel to view and manage attendance records for all employees in a tabular format.</li>
-        </ul>
-        <p>&nbsp;</p>
-        <h4><strong>3.5.1. Add Attendance</strong></h4>
-        <p>The <strong>Add Attendance</strong> feature allows employees to log their attendance for the selected day. Employees can check in and check out based on their assigned shift and update their attendance status. This guide will walk you through the various sections and functionalities of the <strong>Add Attendance</strong> feature.</p>
-        <figure class="image image_resized" style="width:70.03%;"><img src="https://wiki-documentation.vercel.app/Add_Attendance.png">
-        <figcaption>Add Attendance Page</figcaption>
-        </figure>
-        <ul>
-        <li><strong>Employee Name (Read-Only)</strong><br>Your name is automatically populated based on your logged-in user credentials. This field is read-only and cannot be edited.</li>
-        <li><strong>Employee ID (Read-Only)</strong><br>Your unique employee ID is automatically populated. This field is also read-only.</li>
-        <li><strong>Department (Read-Only)</strong><br>Your department is automatically displayed based on your profile information and cannot be edited.</li>
-        <li><strong>Date</strong><br>Select the date for the attendance entry using the date picker provided. This is the date for which attendance will be recorded.</li>
-        <li><strong>Shift 1 Check-Out</strong><br>A button labeled <strong>"Shift 1 Check-Out"</strong> lets you record your check-out time for <strong>Shift 1</strong>. This button will only be active after your check-in time for <strong>Shift 1</strong> has been recorded.</li>
-        <li><strong>Shift 2 Check-In</strong><br>A button labeled <strong>"Shift 2 Check-In"</strong> lets you record your check-in time for <strong>Shift 2</strong>. It will be enabled based on your assigned shift.</li>
-        <li><strong>Shift 2 Check-Out</strong><br>A button labeled <strong>"Shift 2 Check-Out"</strong> allows you to record your check-out time for <strong>Shift 2</strong>. This button becomes active only after your check-in for <strong>Shift 2</strong> is recorded.<br>&nbsp;</li>
-        </ul>
-        <h4><strong>3.5.2. All Attendance</strong></h4>
-        <p>The <strong>All Attendance</strong> feature provides a comprehensive view of the attendance records of all employees. It is displayed in a tabular format with essential columns such as employee details, shift check-in/check-out times, duration, and attendance status. This feature also includes the option to export the attendance records as a CSV file for further analysis.</p>
-        <figure class="image image_resized" style="width:70.05%;"><img src="https://wiki-documentation.vercel.app/All_Attendance.png">
-        <figcaption>All Attendances Page</figcaption>
-        </figure>
-        <p><strong>Attendance Records Table</strong><br>The <strong>All Attendance</strong> page displays the attendance records of all employees in a <strong>table format</strong> with some sort of columns defining the attendance details of an employee.</p>
-        <p><strong>Filtering Attendance Records</strong><br>You can filter attendance records based on specific criteria:</p>
-        <ul>
-        <li><strong>Employee Name</strong><br>Allows searching by employee name to view their attendance records.</li>
-        <li><strong>Date Range</strong><br>Enables filtering the records within a specific date range (e.g., a particular month or week).</li>
-        <li><strong>Department</strong><br>Allows filtering the attendance records by department.</li>
-        </ul>
-        <p><strong>Export CSV Option</strong><br>The <strong>Export CSV</strong> button allows you to download the attendance records of all employees in a <strong>CSV file</strong> format. The CSV file will include the same columns displayed in the table, providing a comprehensive, downloadable report for analysis and record-keeping.</p>
-        <p>To export the records:</p>
-        <ul>
-        <li>Click on the <strong>Export CSV</strong> button.</li>
-        <li>The system will generate a CSV file containing all the attendance details displayed in the table.</li>
-        <li>Download the file to your system for offline access or further processing.</li>
-        </ul>
-        <p>&nbsp;</p>
-        <h3>3.6. Leave</h3>
-        <p>The <strong>Leave Section</strong> in the HRMS portal provides a seamless way for employees to manage their leave requests and for HR to oversee company-wide leave records efficiently. It includes two core features:</p>
-        <ul>
-        <li><strong>Add Leave</strong> – Allows employees to apply for leave by selecting the leave type, duration, and providing necessary details.</li>
-        <li><strong>All Leave</strong> – Enables HR and managers to track and manage all employee leave records in a structured format.</li>
-        </ul>
-        <p>&nbsp;</p>
-        <h4>3.6.1. Add Leave</h4>
-        <p>Employees can submit leave requests by specifying key details, ensuring a smooth and organized leave application process.</p>
-        <figure class="image image_resized" style="width:70.01%;"><img src="https://wiki-documentation.vercel.app/Apply_Leave.png">
-        <figcaption>Apply Leave Page</figcaption>
-        </figure>
-        <ul>
-        <li><strong>Leave Type Selection:</strong> Choose from different leave types such as <strong>Annual Leave, Sick Leave, Casual Leave, Maternity Leave, etc.</strong></li>
-        <li><strong>Date Selection:</strong> Select the leave start and end dates.</li>
-        <li><strong>Reason for Leave:</strong> Provide a justification or upload supporting documents if required.</li>
-        <li><strong>Apply Button:</strong> Click the <strong>"Apply"</strong> button to submit the leave request for approval.</li>
-        </ul>
-        <p>&nbsp;</p>
-        <p>Employees can check their available leave balance before applying for leave.</p>
-        <figure class="image image_resized" style="width:70.06%;"><img src="https://wiki-documentation.vercel.app/Available_Leaves.png">
-        <figcaption>Available Leaves Page</figcaption>
-        </figure>
-        <ul>
-        <li><strong>Available Button:</strong> Click the <strong>"Available"</strong> button to view leave balances categorized by leave type (e.g., total remaining annual leave, sick leave, etc.).</li>
-        <li><strong>Real-Time Updates:</strong> The system automatically updates leave balances after each approved leave.</li>
-        </ul>
-        <p>&nbsp;</p>
-        <h4>3.6.2. All Leaves</h4>
-        <p>The <strong>All Leave</strong> feature in the HRMS portal provides a centralized view of all employee leave records. It enables HR and managers to <strong>track, review, and manage employee leaves efficiently</strong>, ensuring a smooth and well-organized leave management system.</p>
-        <p>HR and managers can access a detailed list of all leave requests submitted by employees.</p>
-        <p><strong>Employee Leave Details:</strong> Displays leave records including:</p>
-        <figure class="image image_resized" style="width:70.08%;"><img src="https://wiki-documentation.vercel.app/Leave_Details.png">
-        <figcaption>Leave Details Page</figcaption>
-        </figure>
-        <ul>
-        <li>Leave ID</li>
-        <li><strong>Employee ID &amp; Name</strong></li>
-        <li><strong>Department</strong></li>
-        <li><strong>Leave Type (Annual, Sick, Casual, etc.)</strong></li>
-        <li><strong>Leave Duration (Start Date &amp; End Date)</strong></li>
-        <li><strong>Description</strong></li>
-        <li><strong>Leave Status (Pending, Approved, Rejected)</strong></li>
-        </ul>
-        <p>&nbsp;</p>
-        <h3><strong>3.7. Performance</strong></h3>
-        <p>The <strong>Performance Section</strong> in the HRMS portal is designed to help employees submit their work reports and allow HR or managers to track and evaluate performance efficiently. This section consists of two key features: <strong>Work Report</strong> and <strong>View Report</strong>, enabling structured performance assessment and productivity tracking.<br>&nbsp;</p>
-        <h4>3.7.1. Work Report</h4>
-        <p>The <strong>Work Report</strong> feature allows employees to submit daily, weekly, or monthly work reports, ensuring transparency in work progress and task completion.</p>
-        <figure class="image image_resized" style="width:70.06%;"><img src="https://wiki-documentation.vercel.app/Performance_Work-Report.png">
-        <figcaption>Task Submission Page</figcaption>
-        </figure>
-        <ul>
-        <li><strong>Task Title:</strong> Employees can enter title of their completed tasks.</li>
-        <li><strong>Task Description:</strong> Field to provide a summary of tasks and achievements.</li>
-        <li><strong>Date Selection:</strong> Choose the reporting date.</li>
-        <li><strong>Time Selection:</strong> Choose the reporting time.</li>
-        <li><strong>Add Task Button:</strong> Click the <strong>"Add Task"</strong> button to save and send the report for review.</li>
-        </ul>
-        <h4>3.7.2. View Report</h4>
-        <p>The <strong>View Report</strong> feature enables managers to access and evaluate submitted reports.</p>
-        <figure class="image image_resized" style="width:70.18%;"><img src="https://wiki-documentation.vercel.app/View_Report_List.png">
-        <figcaption>View Reports List Page</figcaption>
-        </figure>
-        <p><strong>List of Submitted Reports:</strong> Displays employee reports with details such as:</p>
-        <ul>
-        <li><strong>Employee Name &amp; ID</strong></li>
-        <li><strong>Department</strong></li>
-        <li><strong>Report Date</strong></li>
-        </ul>
-        <figure class="image image_resized" style="width:70%;"><img src="https://wiki-documentation.vercel.app/Report_Details.png">
-        <figcaption>Report Details Page</figcaption>
-        </figure>
-        <p>&nbsp;</p>
+        <div class="doc_left">
+            <ul class="nav_links">
+                <li class="main_nav"><a href="#1">1. Introduction</a></li>
+
+                <li class="main_nav"><a href="#2">2. Development Journey</a></li>
+                <ul class="nav_links nav_links2">
+                    <li><a href="#2.1">2.1. Technology Stack</a></li>
+                    <li><a href="#2.2">2.2. Development Phases</a></li>
+                </ul>
+
+                <li class="main_nav"><a href="#3">3. Features of the HRMS Software</a></li>
+                <ul class="nav_links nav_links2">
+                    <li><a href="#3.1">3.1. Dashboard</a></li>
+                    <li><a href="#3.2">3.2. Users</a></li>
+                    <li><a href="#3.3">3.3. Masters</a></li>
+                    <li><a href="#3.4">3.4. Recruitment</a></li>
+                    <li><a href="#3.5">3.5. Attendance</a></li>
+                    <li><a href="#3.6">3.6. Leave</a></li>
+                    <li><a href="#3.7">3.7. Performance</a></li>
+                </ul>
+            </ul>
+        </div>
+        <div class="doc_right">
+            <h1>AASOne HRMS Documentation</h1>
+            <h2 id="1">1. Introduction</h2>
+            <p>Welcome to the <strong>AASOne</strong> <strong>HRMS</strong>, your comprehensive guide to navigating and utilizing the <strong>Human Resource Management System (HRMS)</strong> efficiently. This system streamlines HR processes, designed for ease of use, that enhances workforce management, improves productivity, and ensures compliance with organizational policies. This documentation provides step-by-step instructions to help you maximize its features effectively.</p>
+            
+            <h2 id="2"><strong>2. Development Journey</strong></h2>
+            <p>The <strong>Human Resource Management System (HRMS)</strong> was developed following a structured approach, ensuring scalability, security, and efficiency. Below is an overview of the <strong>technology stack</strong> and <strong>development phases</strong> that shaped the system.</p>
+            <h3 id="2.1"><strong>2.1. Technology Stack</strong></h3>
+            <p>The HRMS is built using modern technologies that enhance performance, security, and seamless user experience:</p>
+            <ul>
+            <li><strong>Backend:</strong> Developed using <strong>Node.js - 22.12.0 (Express.js - 4.21.2)</strong> for building a robust and scalable RESTful API.</li>
+            <li><strong>Frontend:</strong> Built with <strong>Next.js - 15.1.6</strong>, a React-based framework that ensures fast rendering and enhanced user experience.</li>
+            <li><strong>Database:</strong> Utilizes <strong>MongoDB (NoSQL database)</strong> to store and manage employee records, attendance data, and other HR-related information.</li>
+            <li><strong>Authentication:</strong> Implements <strong>JWT-based authentication</strong> for secure access control and data protection.</li>
+            <li><strong>Deployment:</strong> Hosted on multiple platforms, including a <strong>local server, Vercel, Render, and DigitalOcean</strong>, with documentation managed in <strong>Wiki.js</strong> for knowledge sharing.</li>
+            <li><strong>CI/CD:</strong> Uses <strong>Jenkins</strong> for automating build, testing, and deployment processes.</li>
+            <li><strong>Version Control:</strong> Managed through <strong>GitHub</strong>, ensuring efficient source code tracking and collaboration.</li>
+            </ul>
+            <h3 id="2.2"><strong>2.2. Development Phases</strong></h3>
+            <p>The HRMS was developed through a well-defined software development lifecycle (SDLC), consisting of the following phases:</p>
+            <p><strong>Planning</strong></p>
+            <ul>
+            <li>Requirement gathering to understand HR workflow and organizational needs.</li>
+            <li>Designing system architecture for efficient data handling and modular development.</li>
+            </ul>
+            <p><strong>Development</strong></p>
+            <ul>
+            <li>Implementing core modules such as <strong>Recruitment, Attendance, Payroll, and Employee Benefits</strong>.</li>
+            <li>Developing <strong>REST APIs</strong> for seamless integration between frontend and backend.</li>
+            </ul>
+            <p><strong>Testing</strong></p>
+            <ul>
+            <li>Conducting <strong>unit testing</strong> to validate individual functions and components.</li>
+            <li>Performing <strong>integration testing</strong> to ensure smooth interaction between modules.</li>
+            <li>Carrying out <strong>User Acceptance Testing (UAT)</strong> to refine the system based on real-user feedback.</li>
+            </ul>
+            <p><strong>Deployment</strong></p>
+            <ul>
+            <li><strong>Local Hosting:</strong> Initial testing on a <strong>local server</strong> and <strong>Vercel</strong> for frontend previews.</li>
+            <li><strong>Cloud Deployment:</strong> Final production deployment on <strong>DigitalOcean</strong>, ensuring scalability and availability.</li>
+            </ul>
+            <p><strong>Maintenance</strong></p>
+            <ul>
+            <li>Regular updates to enhance features and address security vulnerabilities.</li>
+            <li>Performance optimization to improve system responsiveness and efficiency.</li>
+            </ul>
+            <p>This structured development approach has resulted in a <strong>highly efficient and scalable HRMS</strong>, empowering businesses with a seamless <strong>HR automation solution</strong>.</p>
+            <p>&nbsp;</p>
+            <h2 id="3">3. Features of the HRMS Software</h2>
+            <h3 id="3.1">3.1. Dashboard</h3>
+            <p>Welcome to the HRMS Portal Dashboard. This guide provides a detailed overview of the dashboard functionalities available to HR users after successful login. The dashboard serves as the central hub for managing HR activities, tracking employee records, and gaining insights into various HR operations.<br>&nbsp;</p>
+            <h4 ><strong>3.1.1. Accessing the Dashboard</strong></h4>
+            <p><strong>Login Process:</strong></p>
+            <p>Enter your registered <strong>Email ID</strong> and <strong>Password</strong>.</p>
+            <p>An <strong>OTP (One-Time Password)</strong> will be sent to your email for <strong>two-factor authentication (2FA)</strong>.</p>
+            <p>Enter the OTP and click <strong>Login</strong>.</p>
+            <p>Upon successful authentication, you will be redirected to the <strong>Dashboard</strong>.</p>
+            <p>&nbsp;</p>
+            <h4><strong>3.1.2. Dashboard Overview</strong></h4>
+            <p>Upon logging in, you will see the <strong>HRMS Portal Dashboard</strong>, which provides key HR insights and functionalities at a glance.</p>
+            <figure class="image image_resized" style="width:70.01%;">
+            <img src="https://wiki-documentation.vercel.app/HRMS_Dashboard.png" alt="Local Image">
+            <figcaption>AASOne HRMS Dashboard</figcaption>
+            </figure>
+            <p><strong>Welcome Message</strong></p>
+            <ul>
+            <li>A personalized greeting displaying the HR user’s name.</li>
+            <li>Enhances user engagement by confirming successful login.</li>
+            </ul>
+            <p><strong>Main Dashboard Metrics</strong></p>
+            <ul>
+            <li>This section presents an overview of key HR functions:</li>
+            <li><strong>Active Jobs:</strong> Displays the number of currently open job positions.</li>
+            <li><strong>Notice Status:</strong> Highlights any important notices issued.</li>
+            <li><strong>All Attendance:</strong> Provides insights into employee attendance trends.</li>
+            <li><strong>View Reports:</strong> A quick access link to HR reports for in-depth analysis.</li>
+            </ul>
+            <p><strong>Welcome Box - Team Overview</strong></p>
+            <ul>
+            <li>A <strong>blue-highlighted section</strong> providing a summary of the HR team and key members.</li>
+            <li>Helps HR users quickly check team status and members.</li>
+            </ul>
+            <p><strong>Recent Activities</strong></p>
+            <ul>
+            <li>A <strong>real-time activity feed</strong> showcasing recent HR operations:</li>
+            <li><strong>New Job Posted:</strong> Notifications about newly added job openings.</li>
+            <li><strong>Interview Completed:</strong> Updates on recently concluded interviews.</li>
+            <li><strong>Notice Updated:</strong> Information about the latest notice updates.</li>
+            </ul>
+            <p><strong>HR Insights</strong></p>
+            <ul>
+            <li>A dedicated section offering comprehensive HR data, divided into four key areas:</li>
+            <li><strong>Active Recruitment:</strong> Provides a visual representation of ongoing recruitment processes.</li>
+            <li><strong>Notice Board:</strong> Displays official announcements and HR updates.</li>
+            <li><strong>All Attendance:</strong> Offers a detailed view of employee attendance records.</li>
+            <li><strong>Reports:</strong> Direct access to generate and analyze HR-related reports.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <h3><strong>3.1.3. Using the Dashboard Features</strong></h3>
+            <p><strong>Navigating Between Sections:</strong></p>
+            <ul>
+            <li>Click on any dashboard metric or section to view detailed data.</li>
+            <li>Use the sidebar menu for quick navigation between different HRMS modules.</li>
+            </ul>
+            <p><strong>Managing Jobs &amp; Recruitment:</strong></p>
+            <ul>
+            <li>Click on <strong>Active Jobs</strong> to post new job listings or manage existing ones.</li>
+            <li>Track the status of candidates and interviews in <strong>HR Insights &gt; Active Recruitment</strong>.</li>
+            </ul>
+            <p><strong>Monitoring Notices &amp; Updates:</strong></p>
+            <ul>
+            <li>Check the <strong>Notice Board</strong> for company-wide announcements.</li>
+            <li>Post and update notices as per HR policies.</li>
+            </ul>
+            <p><strong>Attendance &amp; Reports:</strong></p>
+            <ul>
+            <li>View detailed attendance records in <strong>All Attendance</strong>.</li>
+            <li>Generate employee and HR reports via the <strong>Reports</strong> section.<br>&nbsp;</li>
+            </ul>
+            <h3 id="3.2">3.2. Users&nbsp;</h3>
+            <p>The <strong>Users</strong> in the HRMS Portal allows HR administrators to manage user accounts efficiently. It provides functionalities to add new users and manage existing users with options to edit or delete user profiles.</p>
+            <p>The Users option consists of two main sections:</p>
+            <ul>
+            <li><strong>Add User</strong></li>
+            <li><strong>Manage Users</strong></li>
+            </ul>
+            <p>&nbsp;</p>
+            <h4><strong>3.2.1. Add User</strong></h4>
+            <p>The <strong>Add User</strong> section enables HR to create new user accounts by filling in necessary details. The following fields are available:</p>
+            <figure class="image image_resized" style="width:70.06%;"><img src="https://wiki-documentation.vercel.app/Add_User.png">
+            <figcaption>Add User Page</figcaption>
+            </figure>
+            <p><strong>Fields in Add User Form:</strong></p>
+            <ul>
+            <li><strong>Full Name:</strong> Enter the full name of the user.</li>
+            <li><strong>Username:</strong> Provide a unique username for system login.</li>
+            <li><strong>Email:</strong> Input the user’s official email address.</li>
+            <li><strong>Password:</strong> Set a secure password for the user.</li>
+            <li><strong>Contact:</strong> Enter the user’s phone number.</li>
+            <li><strong>Role:</strong> Assign a role (e.g., HR, Manager, Employee) based on access levels.</li>
+            </ul>
+            <p><strong>Steps to Add a User:</strong></p>
+            <ul>
+            <li>Navigate to the <strong>Users Module</strong> and select <strong>Add User</strong>.</li>
+            <li>Fill in the required details in the form.</li>
+            <li>Click the <strong>Submit</strong> button to create the user.</li>
+            <li>The new user will now appear in the <strong>Manage Users</strong> section.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <h4><strong>3.2.2. Manage Users</strong></h4>
+            <p>The <strong>Manage Users</strong> section displays all existing users in a <strong>card-based layout</strong>. Each user is represented by a card containing their key details and an action menu.</p>
+            <figure class="image image_resized" style="width:70.04%;"><img src="https://wiki-documentation.vercel.app/Manage_Users.png">
+            <figcaption>Users Management Page</figcaption>
+            </figure>
+            <p><strong>User Card Features:</strong></p>
+            <ul>
+            <li>Displays the user’s <strong>name, email, contact, and role</strong>.</li>
+            <li>Each card has a <strong>three-dot menu (⋮) in the top-right corner</strong> for additional actions.</li>
+            </ul>
+            <p><strong>Edit User:</strong></p>
+            <ul>
+            <li>Click on the three-dot menu (⋮) and select <strong>Edit</strong>.</li>
+            <li>Modify user details in the form.</li>
+            <li>Click <strong>Save Changes</strong> to update the user’s information.</li>
+            </ul>
+            <p><strong>Delete User:</strong></p>
+            <ul>
+            <li>Click on the three-dot menu (⋮) and select <strong>Delete</strong>.</li>
+            <li>A confirmation prompt will appear.</li>
+            <li>Confirm the deletion to permanently remove the user.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <h3 id="3.3">3.3. Masters</h3>
+            <p>The <strong>Master Module</strong> in the HRMS Portal provides administrative capabilities to manage essential configurations such as skills, interview rounds, and location settings (countries and states). This module ensures streamlined HR processes by defining key parameters used throughout the portal.</p>
+            <p>The Master Module consists of three main sections:</p>
+            <ul>
+            <li><strong>Manage Skills</strong></li>
+            <li><strong>Manage Interview Rounds</strong></li>
+            <li><strong>Manage Country</strong></li>
+            </ul>
+            <p>&nbsp;</p>
+            <h4><strong>3.3.1. Manage Skills</strong></h4>
+            <p>The <strong>Manage Skills</strong> section allows HR administrators to define and maintain skill records within the system.</p>
+            <figure class="image image_resized" style="width:70.02%;"><img src="https://wiki-documentation.vercel.app/Master_Table_Manage_Skills.png">
+            <figcaption>Manage Skills Master Page</figcaption>
+            </figure>
+            <p><strong>Features:</strong></p>
+            <ul>
+            <li><strong>Add Skill:</strong> Enter a new skill to be used for job requirements.</li>
+            <li><strong>Search Skill:</strong> Find an existing skill using a search function.</li>
+            </ul>
+            <p><strong>Steps to Add a Skill:</strong></p>
+            <ul>
+            <li>Navigate to the <strong>Manage Skills</strong> section.</li>
+            <li>Enter the skill name in the <strong>Add Skill</strong> field.</li>
+            <li>Click the <strong>Submit</strong> button to save the skill.</li>
+            <li>The newly added skill will be available for future job postings.</li>
+            </ul>
+            <p><strong>Steps to Search for a Skill:</strong></p>
+            <ul>
+            <li>Use the <strong>Search Skill</strong> field to enter the skill name.</li>
+            <li>The system will display relevant results dynamically.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <h4><strong>3.3.2. Manage Interview Rounds</strong></h4>
+            <p>The <strong>Manage Interview Rounds</strong> section allows HR administrators to define job roles and assign interview rounds accordingly.</p>
+            <figure class="image image_resized" style="width:70.15%;"><img src="https://wiki-documentation.vercel.app/Master_Table_Manage_Interview_Rounds.png">
+            <figcaption>Job Roles Management Page</figcaption>
+            </figure>
+            <p><strong>Job Roles Management Block:</strong></p>
+            <ul>
+            <li><strong>Add New Job Role:</strong> Create a new job role to categorize interview rounds.</li>
+            </ul>
+            <p><strong>Interview Rounds Block:</strong></p>
+            <ul>
+            <li><strong>Select Interview Rounds:</strong> Assign interview rounds to a specific job role using a dropdown selection.</li>
+            </ul>
+            <p><strong>Steps to Add a Job Role:</strong></p>
+            <ul>
+            <li>Navigate to the <strong>Manage Interview Rounds</strong> section.</li>
+            <li>Under the <strong>Job Roles Management Block</strong>, enter the new job role.</li>
+            <li>Click <strong>Submit</strong> to save the job role.</li>
+            </ul>
+            <p><strong>Steps to Select Interview Rounds:</strong></p>
+            <ul>
+            <li>Under the <strong>Interview Rounds Block</strong>, select a job role from the dropdown list.</li>
+            <li>Choose the relevant interview rounds for the selected job role.</li>
+            <li>Click <strong>Save Changes</strong> to confirm the selection.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <h4><strong>3.3.3. Manage Country</strong></h4>
+            <p>The <strong>Manage Country</strong> section allows administrators to maintain country and state records.</p>
+            <figure class="image image_resized" style="width:70.03%;"><img src="https://wiki-documentation.vercel.app/Master_Table_Manage_Country.png">
+            <figcaption>Manage Country Master Page</figcaption>
+            </figure>
+            <p><strong>Countries Block:</strong></p>
+            <ul>
+            <li><strong>Add New Country:</strong> Register a new country in the system.</li>
+            </ul>
+            <p><strong>States Block:</strong></p>
+            <ul>
+            <li><strong>Add New State:</strong> Select a country from the dropdown and add a state under it.</li>
+            </ul>
+            <p><strong>Steps to Add a Country:</strong></p>
+            <ul>
+            <li>Navigate to the <strong>Manage Country</strong> section.</li>
+            <li>Under the <strong>Countries Block</strong>, enter the new country name.</li>
+            <li>Click <strong>Submit</strong> to save the country.</li>
+            </ul>
+            <p><strong>Steps to Add a State:</strong></p>
+            <ul>
+            <li>Under the <strong>States Block</strong>, select a country from the dropdown.</li>
+            <li>Enter the new state name.</li>
+            <li>Click <strong>Submit</strong> to save the state under the selected country.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <h3 id="3.4">3.4. Recruitment</h3>
+            <p>The Recruitment section of the HRMS portal is a comprehensive tool designed to streamline the hiring process. This section enables HR professionals to create job notices, manage applications, and oversee all stages of the recruitment cycle efficiently. Key features of the recruitment section include:</p>
+            <ul>
+            <li><strong>Create Notice</strong>: Easily craft and publish detailed job notices to attract qualified candidates.</li>
+            <li><strong>Notice Status</strong>: Monitor the status of job notices, ensuring they reach the intended audience.</li>
+            <li><strong>Manage Jobs</strong>: Keep track of all job postings and make updates as needed.</li>
+            <li><strong>Applied Candidates</strong>: View and manage applications from prospective candidates.</li>
+            <li><strong>Interview</strong>: Schedule and track interviews to assess candidate suitability.</li>
+            <li><strong>Selected Candidates</strong>: Identify and confirm the most suitable candidates for the job.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <h4>3.4.1. Create Notice</h4>
+            <p>The <strong>Create Job Notice</strong> page in the AAS HRMS portal allows HR administrators to craft and publish detailed job listings. This feature ensures seamless job posting with essential details like job title, description, category, number of positions, and more.</p>
+            <figure class="image image_resized" style="width:70.03%;"><img src="https://wiki-documentation.vercel.app/Create_Notice.png">
+            <figcaption>Create Notice Page</figcaption>
+            </figure>
+            <p>The following fields and functionalities are available on the <strong>Create Job Notice</strong> page:</p>
+            <p><strong>Job Title</strong></p>
+            <ul>
+            <li>A text input field to enter the job title.</li>
+            <li>Example: <i>Software Engineer, HR Manager, Sales Executive, etc.</i></li>
+            </ul>
+            <p><strong>Job Description</strong></p>
+            <p>A text area to provide a detailed job description that includes formatting options:</p>
+            <ul>
+            <li><strong>Bold</strong></li>
+            <li><i>Italic</i></li>
+            <li><strong>Underline</strong></li>
+            <li>Bullet points for structured content.</li>
+            </ul>
+            <p><strong>Job Category</strong></p>
+            <ul>
+            <li>A dropdown menu to select the appropriate job category.</li>
+            <li>Example: <i>IT, Marketing, Finance, Human Resources, etc.</i></li>
+            </ul>
+            <p><strong>Number of Positions</strong></p>
+            <ul>
+            <li>A text input field to specify the number of vacancies for the job.</li>
+            <li>Example: <i>1, 5, 10, etc.</i></li>
+            </ul>
+            <p><strong>Publish Date</strong></p>
+            <ul>
+            <li>A date picker to set the job notice publish date.</li>
+            <li>Ensures that the job post is scheduled correctly.</li>
+            </ul>
+            <p><strong>Expiry Date</strong></p>
+            <ul>
+            <li>A date picker to set the expiry date of the job notice.</li>
+            <li>Automatically defaults to <strong>6 months</strong> from the publish date, but can be manually adjusted.</li>
+            </ul>
+            <p><strong>Create Job Notice Button</strong></p>
+            <ul>
+            <li>A button labeled <strong>"Create Job Notice"</strong> to submit the job posting.</li>
+            <li>Ensures that all required fields are validated before submission.</li>
+            </ul>
+            <p><strong>Steps to Create a Job Notice</strong></p>
+            <ul>
+            <li>Navigate to the <strong>Recruitment</strong> section and select <strong>Create Job Notice</strong>.</li>
+            <li>Fill in the <strong>Job Title</strong> in the provided text input field.</li>
+            <li>Write a detailed <strong>Job Description</strong> using the formatting options.</li>
+            <li>Choose the <strong>Job Category</strong> from the dropdown menu.</li>
+            <li>Enter the <strong>Number of Positions</strong> available.</li>
+            <li>Select the <strong>Publish Date</strong> using the date picker.</li>
+            <li>Verify the <strong>Expiry Date</strong> (auto-set to 6 months from publish date, but adjustable if needed).</li>
+            <li>Click on the <strong>Create Job Notice</strong> button to submit the job post.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <h4>3.4.2. Notice Status</h4>
+            <p>The <strong>Notice Status</strong> page in the Recruitment section of the AAS HRMS portal provides HR professionals with an organized view of all published job notices. This page enables tracking and managing job notices efficiently, ensuring a streamlined recruitment process.</p>
+            <figure class="image image_resized" style="width:70.12%;"><img src="https://wiki-documentation.vercel.app/Notice_Status.png">
+            <figcaption>Notice Status Page</figcaption>
+            </figure>
+            <p>The following fields are available on the <strong>Notice Status</strong> page:</p>
+            <p><strong>Notice ID</strong></p>
+            <ul>
+            <li>A unique identifier assigned to each job notice.</li>
+            <li>Helps in quick reference and tracking of job notices.</li>
+            </ul>
+            <p><strong>Job Title</strong></p>
+            <ul>
+            <li>Displays the title of the advertised job.</li>
+            <li>Example: <i>Software Engineer, HR Manager, Sales Executive, etc.</i></li>
+            </ul>
+            <p><strong>Category</strong></p>
+            <ul>
+            <li>Indicates the department or category to which the job belongs.</li>
+            <li>Example: <i>IT, Marketing, Finance, Human Resources, etc.</i></li>
+            </ul>
+            <p><strong>Openings</strong></p>
+            <ul>
+            <li>Shows the number of available positions for the respective job notice.</li>
+            <li>Example: <i>1, 5, 10, etc.</i></li>
+            </ul>
+            <p><strong>Status</strong></p>
+            <ul>
+            <li>Displays the current status of the job notice.</li>
+            <li>Possible statuses include:</li>
+            <li><strong>Approved</strong> – Job notice is approved and ready for job creation.</li>
+            <li><strong>Pending</strong> – Job notice is awaiting approval.</li>
+            </ul>
+            <p><strong>Actions</strong></p>
+            <ul>
+            <li>The following actions can be performed for each job notice:</li>
+            </ul>
+            <p><strong>View (Eye Icon)</strong></p>
+            <ul>
+            <li>Allows users to view detailed information about the job notice.</li>
+            <li>Clicking the eye icon opens a detailed view page with full job notice details.</li>
+            </ul>
+            <p><strong>Create Job (Button)</strong></p>
+            <ul>
+            <li>Enables HR professionals to create a job posting based on the approved job notice.</li>
+            <li>Only available for notices with an <strong>Approved</strong> status.</li>
+            </ul>
+            <p><strong>Table View for Job Notices</strong></p>
+            <ul>
+            <li>All job notices are displayed in a structured table format.</li>
+            <li>Columns include <strong>Notice ID, Job Title, Category, Openings, Status, and Actions</strong>.</li>
+            <li>Users can easily track, view, and take action on job notices from this table.</li>
+            </ul>
+            <h4>3.4.3. Manage Jobs</h4>
+            <p>The <strong>Manage Jobs</strong> page in the Recruitment section of the AAS HRMS portal provides HR professionals with an organized view of all available jobs. This page allows users to efficiently manage job postings, including editing and deleting job listings.</p>
+            <figure class="image image_resized" style="width:70.07%;"><img src="https://wiki-documentation.vercel.app/Manage_Jobs.png">
+            <figcaption>Jobs List Page</figcaption>
+            </figure>
+            <p>The following features are available on the <strong>Manage Jobs</strong> page:</p>
+            <p><strong>1. Job Cards View</strong></p>
+            <p>All available jobs are displayed in a <strong>card format </strong>where each job card contains <strong>essential job details</strong> such as:</p>
+            <ul>
+            <li><strong>Job Title</strong></li>
+            <li><strong>Job Category</strong></li>
+            <li><strong>Number of Positions Available</strong></li>
+            <li><strong>Status of the Job Posting</strong></li>
+            </ul>
+            <p>Clicking on a job card opens a <strong>detailed view</strong> of the job listing.</p>
+            <p><strong>2. Three-Dot Menu Options</strong></p>
+            <p>Each job card has a three-dot menu (<strong>⋮</strong>) located at the <strong>top right corner</strong>, offering the following options:</p>
+            <p><strong>&nbsp; &nbsp; Edit Job</strong></p>
+            <ul>
+            <li>Allows users to modify job details.</li>
+            <li>Clicking this option opens the job editing interface.</li>
+            </ul>
+            <p><strong>&nbsp; &nbsp; Delete Job</strong></p>
+            <ul>
+            <li>Enables users to remove a job posting from the portal.</li>
+            <li>A confirmation prompt appears before deletion to prevent accidental removal.</li>
+            </ul>
+            <p><strong>3. Job Details View</strong></p>
+            <ul>
+            <li>Clicking on a job card opens a detailed page displaying the <strong>full job description and additional job details</strong>.</li>
+            <li>Users can review all aspects of the job posting before making modifications.</li>
+            </ul>
+            <p><strong>4. Steps to Manage Jobs</strong></p>
+            <ul>
+            <li>Navigate to the <strong>Recruitment</strong> section and select <strong>Manage Jobs</strong>.</li>
+            <li>Browse through the <strong>job cards</strong> displayed on the page.</li>
+            <li>Click on a job card to view <strong>detailed job information</strong>.</li>
+            <li>Use the <strong>three-dot menu</strong> to either <strong>Edit</strong> or <strong>Delete</strong> a job posting.</li>
+            <li>Confirm changes or deletions as needed.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <h4>3.4.4. Applied Candidates</h4>
+            <p>The <strong>All Applicants</strong> page in the Recruitment section of the AAS HRMS portal provides HR professionals with a structured and detailed list of all job applicants. This page allows for efficient tracking, reviewing, and shortlisting of candidates.</p>
+            <figure class="image image_resized" style="width:70.03%;"><img src="https://wiki-documentation.vercel.app/All_Applicants.png">
+            <figcaption>All Applicants Page</figcaption>
+            </figure>
+            <p>The following features are available on the <strong>All Applicants</strong> page:</p>
+            <p><strong>1. Tabular Format for Applicants</strong></p>
+            <ul>
+            <li>All applicants are displayed in a <strong>structured table</strong> for easy review.</li>
+            <li>The table contains the following <strong>columns</strong>:</li>
+            <li><strong>Applicant ID</strong> – A unique identifier assigned to each applicant.</li>
+            <li><strong>Full Name</strong> – Displays the full name of the applicant.</li>
+            <li><strong>Gender</strong> – Specifies the applicant’s gender.</li>
+            <li><strong>Role</strong> – Indicates the job role applied for.</li>
+            <li><strong>Email</strong> – Shows the applicant's email address.</li>
+            <li><strong>Actions</strong> – Provides an option to shortlist candidates.</li>
+            </ul>
+            <p><strong>2. Shortlist Candidate Action</strong></p>
+            <ul>
+            <li>Under the <strong>Actions</strong> column, an <strong>eye icon (👁)</strong> is available.</li>
+            <li>Clicking the <strong>eye icon</strong> allows HR professionals to <strong>shortlist</strong> a candidate for further evaluation.</li>
+            <li>This helps streamline the hiring process by keeping track of potential hires efficiently.</li>
+            </ul>
+            <figure class="image image_resized" style="width:70.01%;"><img src="https://wiki-documentation.vercel.app/Candidate_Shortlisting_View.png">
+            <figcaption>Shortlisting Page</figcaption>
+            </figure>
+            <p><strong>3. Steps to View and Shortlist Applicants</strong></p>
+            <ul>
+            <li>Navigate to the <strong>Recruitment</strong> section and select <strong>All Applicants</strong>.</li>
+            <li>Browse through the <strong>tabular list of applicants</strong>.</li>
+            <li>Review applicant details such as <strong>Full Name, Role, and Email</strong>.</li>
+            <li>Click the <strong>eye icon</strong> under the <strong>Actions</strong> column to shortlist a candidate.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <h4>3.4.5. Interview</h4>
+            <p>The <strong>Interview</strong> section under the Recruitment module of the AAS HRMS portal allows interviewers to manage and track candidates scheduled for interviews. This page presents an organized list of candidates in a tabular format, enabling HR professionals to review interview details, download resumes, and provide feedback.</p>
+            <figure class="image image_resized" style="width:70.06%;"><img src="https://wiki-documentation.vercel.app/Scheduled_Interview_List.png">
+            <figcaption>Scheduled Candidates Page</figcaption>
+            </figure>
+            <p>The following features are available on the <strong>Interview</strong> page:</p>
+            <p><strong>1. Tabular Format for Scheduled Interviews</strong></p>
+            <p>The page displays a <strong>list of candidates</strong> scheduled for interviews in a structured table format that consists of the following <strong>columns</strong>:</p>
+            <ul>
+            <li><strong>Applicant ID</strong> – A unique identifier assigned to each applicant.</li>
+            <li><strong>Name</strong> – Displays the full name of the candidate.</li>
+            <li><strong>Round Name</strong> – Specifies the interview round (e.g., Technical, HR, Final).</li>
+            <li><strong>Role</strong> – Indicates the job role applied for.</li>
+            <li><strong>Date</strong> – Shows the scheduled interview date.</li>
+            <li><strong>Time</strong> – Displays the interview timing.</li>
+            <li><strong>Mode</strong> – Specifies whether the interview is online or offline.</li>
+            <li><strong>Result</strong> – Indicates the candidate’s interview status.</li>
+            <li><strong>Actions</strong> – Provides multiple options to manage candidate interviews.</li>
+            </ul>
+            <p><strong>2. Actions Column Options</strong></p>
+            <figure class="image image_resized" style="width:70.08%;"><img src="https://wiki-documentation.vercel.app/Interviewer_Candidate_View.png">
+            <figcaption>Candidate Interview Page</figcaption>
+            </figure>
+            <p>The <strong>Actions</strong> column provides the following functionalities:</p>
+            <ul>
+            <li><strong>View Candidate Details: </strong>Clicking the <strong>eye icon (👁)</strong> allows interviewers to view detailed candidate information.</li>
+            <li><strong>Download Resume: </strong>Interviewers can download the candidate’s resume for review before the interview.</li>
+            <li><strong>Give Feedback: </strong>A <strong>feedback box</strong> is available for interviewers to provide comments or notes about the candidate's performance.</li>
+            <li><strong>Select Interview Result:&nbsp;</strong></li>
+            </ul>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;A <strong>radio button</strong> is provided with two options:</p>
+            <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Cleared</strong> – Marks the candidate as successful in the interview.</p>
+            <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Failed</strong> – Marks the candidate as unsuccessful in the interview.</p>
+            <p><strong>3. Steps to Manage Interviews</strong></p>
+            <ul>
+            <li>Navigate to the <strong>Recruitment</strong> section and select <strong>Interview</strong>.</li>
+            <li>Browse through the <strong>tabular list of scheduled candidates</strong>.</li>
+            <li>Click the <strong>eye icon</strong> to view <strong>candidate details</strong>.</li>
+            <li>Click <strong>Download Resume</strong> to obtain the candidate’s resume.</li>
+            <li>Provide <strong>feedback</strong> in the designated text box.</li>
+            <li>Select the <strong>interview result</strong> by clicking the <strong>Cleared</strong> or <strong>Failed</strong> radio button.</li>
+            <li>Save the feedback and interview status.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <h4>3.4.6. Selected Candidates</h4>
+            <p>The <strong>Selected Candidates</strong> page in the Recruitment section of the AAS HRMS portal provides HR professionals with a structured list of candidates who have successfully cleared the interview rounds and are selected for hiring. This page enables HR teams to generate offer letters for these candidates efficiently.</p>
+            <figure class="image image_resized" style="width:70.07%;"><img src="https://wiki-documentation.vercel.app/Selected_Candidates.png">
+            <figcaption>Selected Candidates Page</figcaption>
+            </figure>
+            <p>The following features are available on the <strong>Selected Candidates</strong> page:</p>
+            <p><strong>1. Tabular Format for Selected Candidates</strong></p>
+            <p>The page presents a <strong>list of selected candidates</strong> in a structured table format that consists of the following <strong>columns</strong>:</p>
+            <ul>
+            <li><strong>Candidate ID</strong> – A unique identifier assigned to each selected candidate.</li>
+            <li><strong>Full Name</strong> – Displays the full name of the selected candidate.</li>
+            <li><strong>Role</strong> – Indicates the job role for which the candidate is selected.</li>
+            <li><strong>Email</strong> – Shows the candidate’s email address.</li>
+            <li><strong>Status</strong> – Displays the hiring status of the candidate.</li>
+            <li><strong>Actions</strong> – Provides an option to generate an offer letter.</li>
+            </ul>
+            <p><strong>2. Generate Offer Letter Action</strong></p>
+            <ul>
+            <li>Under the <strong>Actions</strong> column, a <strong>Generate Offer</strong> button is available.</li>
+            <li>Clicking the <strong>Generate Offer</strong> button initiates the process of creating an official offer letter for the selected candidate.</li>
+            <li>This feature helps streamline the hiring process by enabling quick and efficient offer letter generation.</li>
+            </ul>
+            <p><strong>3. Steps to Generate an Offer Letter</strong></p>
+            <figure class="image image_resized" style="width:70.1%;"><img src="https://wiki-documentation.vercel.app/Offer_Letter.png">
+            <figcaption>Offer Letter Page</figcaption>
+            </figure>
+            <ul>
+            <li>Navigate to the <strong>Recruitment</strong> section and select <strong>Selected Candidates</strong>.</li>
+            <li>Browse through the <strong>tabular list of selected candidates</strong>.</li>
+            <li>Click the <strong>Generate Offer</strong> button under the <strong>Actions</strong> column for the desired candidate.</li>
+            <li>The system will initiate the offer letter generation process.</li>
+            <li>Review and finalize the offer letter before sending it to the candidate.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <h3 id="3.5">3.5. Attendance</h3>
+            <p>The <strong>Attendance Section</strong> in the HRMS portal is designed to streamline and automate employee attendance tracking, ensuring accurate and real-time records. It includes two core features:</p>
+            <ul>
+            <li><strong>Add Attendance</strong> – Allows employees to mark their attendance by clicking <strong>Check-In</strong> and <strong>Check-Out</strong> buttons based on their shift timings.</li>
+            <li><strong>All Attendance</strong> – Enables HR personnel to view and manage attendance records for all employees in a tabular format.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <h4><strong>3.5.1. Add Attendance</strong></h4>
+            <p>The <strong>Add Attendance</strong> feature allows employees to log their attendance for the selected day. Employees can check in and check out based on their assigned shift and update their attendance status. This guide will walk you through the various sections and functionalities of the <strong>Add Attendance</strong> feature.</p>
+            <figure class="image image_resized" style="width:70.03%;"><img src="https://wiki-documentation.vercel.app/Add_Attendance.png">
+            <figcaption>Add Attendance Page</figcaption>
+            </figure>
+            <ul>
+            <li><strong>Employee Name (Read-Only)</strong><br>Your name is automatically populated based on your logged-in user credentials. This field is read-only and cannot be edited.</li>
+            <li><strong>Employee ID (Read-Only)</strong><br>Your unique employee ID is automatically populated. This field is also read-only.</li>
+            <li><strong>Department (Read-Only)</strong><br>Your department is automatically displayed based on your profile information and cannot be edited.</li>
+            <li><strong>Date</strong><br>Select the date for the attendance entry using the date picker provided. This is the date for which attendance will be recorded.</li>
+            <li><strong>Shift 1 Check-Out</strong><br>A button labeled <strong>"Shift 1 Check-Out"</strong> lets you record your check-out time for <strong>Shift 1</strong>. This button will only be active after your check-in time for <strong>Shift 1</strong> has been recorded.</li>
+            <li><strong>Shift 2 Check-In</strong><br>A button labeled <strong>"Shift 2 Check-In"</strong> lets you record your check-in time for <strong>Shift 2</strong>. It will be enabled based on your assigned shift.</li>
+            <li><strong>Shift 2 Check-Out</strong><br>A button labeled <strong>"Shift 2 Check-Out"</strong> allows you to record your check-out time for <strong>Shift 2</strong>. This button becomes active only after your check-in for <strong>Shift 2</strong> is recorded.<br>&nbsp;</li>
+            </ul>
+            <h4><strong>3.5.2. All Attendance</strong></h4>
+            <p>The <strong>All Attendance</strong> feature provides a comprehensive view of the attendance records of all employees. It is displayed in a tabular format with essential columns such as employee details, shift check-in/check-out times, duration, and attendance status. This feature also includes the option to export the attendance records as a CSV file for further analysis.</p>
+            <figure class="image image_resized" style="width:70.05%;"><img src="https://wiki-documentation.vercel.app/All_Attendance.png">
+            <figcaption>All Attendances Page</figcaption>
+            </figure>
+            <p><strong>Attendance Records Table</strong><br>The <strong>All Attendance</strong> page displays the attendance records of all employees in a <strong>table format</strong> with some sort of columns defining the attendance details of an employee.</p>
+            <p><strong>Filtering Attendance Records</strong><br>You can filter attendance records based on specific criteria:</p>
+            <ul>
+            <li><strong>Employee Name</strong><br>Allows searching by employee name to view their attendance records.</li>
+            <li><strong>Date Range</strong><br>Enables filtering the records within a specific date range (e.g., a particular month or week).</li>
+            <li><strong>Department</strong><br>Allows filtering the attendance records by department.</li>
+            </ul>
+            <p><strong>Export CSV Option</strong><br>The <strong>Export CSV</strong> button allows you to download the attendance records of all employees in a <strong>CSV file</strong> format. The CSV file will include the same columns displayed in the table, providing a comprehensive, downloadable report for analysis and record-keeping.</p>
+            <p>To export the records:</p>
+            <ul>
+            <li>Click on the <strong>Export CSV</strong> button.</li>
+            <li>The system will generate a CSV file containing all the attendance details displayed in the table.</li>
+            <li>Download the file to your system for offline access or further processing.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <h3 id="3.6">3.6. Leave</h3>
+            <p>The <strong>Leave Section</strong> in the HRMS portal provides a seamless way for employees to manage their leave requests and for HR to oversee company-wide leave records efficiently. It includes two core features:</p>
+            <ul>
+            <li><strong>Add Leave</strong> – Allows employees to apply for leave by selecting the leave type, duration, and providing necessary details.</li>
+            <li><strong>All Leave</strong> – Enables HR and managers to track and manage all employee leave records in a structured format.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <h4>3.6.1. Add Leave</h4>
+            <p>Employees can submit leave requests by specifying key details, ensuring a smooth and organized leave application process.</p>
+            <figure class="image image_resized" style="width:70.01%;"><img src="https://wiki-documentation.vercel.app/Apply_Leave.png">
+            <figcaption>Apply Leave Page</figcaption>
+            </figure>
+            <ul>
+            <li><strong>Leave Type Selection:</strong> Choose from different leave types such as <strong>Annual Leave, Sick Leave, Casual Leave, Maternity Leave, etc.</strong></li>
+            <li><strong>Date Selection:</strong> Select the leave start and end dates.</li>
+            <li><strong>Reason for Leave:</strong> Provide a justification or upload supporting documents if required.</li>
+            <li><strong>Apply Button:</strong> Click the <strong>"Apply"</strong> button to submit the leave request for approval.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <p>Employees can check their available leave balance before applying for leave.</p>
+            <figure class="image image_resized" style="width:70.06%;"><img src="https://wiki-documentation.vercel.app/Available_Leaves.png">
+            <figcaption>Available Leaves Page</figcaption>
+            </figure>
+            <ul>
+            <li><strong>Available Button:</strong> Click the <strong>"Available"</strong> button to view leave balances categorized by leave type (e.g., total remaining annual leave, sick leave, etc.).</li>
+            <li><strong>Real-Time Updates:</strong> The system automatically updates leave balances after each approved leave.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <h4>3.6.2. All Leaves</h4>
+            <p>The <strong>All Leave</strong> feature in the HRMS portal provides a centralized view of all employee leave records. It enables HR and managers to <strong>track, review, and manage employee leaves efficiently</strong>, ensuring a smooth and well-organized leave management system.</p>
+            <p>HR and managers can access a detailed list of all leave requests submitted by employees.</p>
+            <p><strong>Employee Leave Details:</strong> Displays leave records including:</p>
+            <figure class="image image_resized" style="width:70.08%;"><img src="https://wiki-documentation.vercel.app/Leave_Details.png">
+            <figcaption>Leave Details Page</figcaption>
+            </figure>
+            <ul>
+            <li>Leave ID</li>
+            <li><strong>Employee ID &amp; Name</strong></li>
+            <li><strong>Department</strong></li>
+            <li><strong>Leave Type (Annual, Sick, Casual, etc.)</strong></li>
+            <li><strong>Leave Duration (Start Date &amp; End Date)</strong></li>
+            <li><strong>Description</strong></li>
+            <li><strong>Leave Status (Pending, Approved, Rejected)</strong></li>
+            </ul>
+            <p>&nbsp;</p>
+            <h3 id="3.7"><strong>3.7. Performance</strong></h3>
+            <p>The <strong>Performance Section</strong> in the HRMS portal is designed to help employees submit their work reports and allow HR or managers to track and evaluate performance efficiently. This section consists of two key features: <strong>Work Report</strong> and <strong>View Report</strong>, enabling structured performance assessment and productivity tracking.<br>&nbsp;</p>
+            <h4>3.7.1. Work Report</h4>
+            <p>The <strong>Work Report</strong> feature allows employees to submit daily, weekly, or monthly work reports, ensuring transparency in work progress and task completion.</p>
+            <figure class="image image_resized" style="width:70.06%;"><img src="https://wiki-documentation.vercel.app/Performance_Work-Report.png">
+            <figcaption>Task Submission Page</figcaption>
+            </figure>
+            <ul>
+            <li><strong>Task Title:</strong> Employees can enter title of their completed tasks.</li>
+            <li><strong>Task Description:</strong> Field to provide a summary of tasks and achievements.</li>
+            <li><strong>Date Selection:</strong> Choose the reporting date.</li>
+            <li><strong>Time Selection:</strong> Choose the reporting time.</li>
+            <li><strong>Add Task Button:</strong> Click the <strong>"Add Task"</strong> button to save and send the report for review.</li>
+            </ul>
+            <h4>3.7.2. View Report</h4>
+            <p>The <strong>View Report</strong> feature enables managers to access and evaluate submitted reports.</p>
+            <figure class="image image_resized" style="width:70.18%;"><img src="https://wiki-documentation.vercel.app/View_Report_List.png">
+            <figcaption>View Reports List Page</figcaption>
+            </figure>
+            <p><strong>List of Submitted Reports:</strong> Displays employee reports with details such as:</p>
+            <ul>
+            <li><strong>Employee Name &amp; ID</strong></li>
+            <li><strong>Department</strong></li>
+            <li><strong>Report Date</strong></li>
+            </ul>
+            <figure class="image image_resized" style="width:70%;"><img src="https://wiki-documentation.vercel.app/Report_Details.png">
+            <figcaption>Report Details Page</figcaption>
+            </figure>
+            <p>&nbsp;</p>
+        </div>
     </div>
 </body>
 </html>
